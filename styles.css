@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --color-primaria: #000000;
+    --color-secundaria: #f1f1f1;
+    --color-terciaria: #0A3871;
+    --fuente-krona: 'Krona One', sans-serif;
+    --fuente-montserrat: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--color-primaria);
+    justify-content: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    margin-top: 5%;
+    background-image: url("img/Ruido.png");
+    background-size: 120% 140%;
+    position: relative;
+}
+
+.container {
+    background-color: var(--color-secundaria);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    width: 300px;
+    text-align: center;
+}
+
+.container__resultado {
+    background-color: var(--color-secundaria);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.texto__titulo {
+    font-size: 1.25rem;
+    margin-bottom: 45%;
+    font-family: var(--fuente-krona);
+}
+
+.texto__titulo__destaque {
+    color: var(--color-terciaria);
+}
+
+.texto__parrafo {
+    font-family: var(--fuente-montserrat);
+    font-size: 0.7rem;
+    font-weight: 400;
+    line-height: 15px;
+    text-align: left;
+}
+
+textarea {
+    background-color: var(--color-secundaria);
+    width: 90%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid var(--color-terciaria);
+    border-radius: 10px;
+    resize: none;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 18px;
+}
+
+.btn__encriptar {
+    background: var(--color-terciaria);
+    color: var(--color-secundaria);
+    padding: 15px 20px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    width: 48%;
+}
+
+.btn__desencriptar {
+    background: #D8DFE8;
+    color: #286ec5;
+    padding: 15px 20px;
+    border: 1px solid var(--color-terciaria);
+    border-radius: 24px;
+    cursor: pointer;
+    width: 48%;
+}
+
+.btn__encriptar:hover {
+    background-color: #1a549b;
+}
+
+.btn__desencriptar:hover {
+    background-color: #5c9be9;
+}
+
+.btn__copiar:hover {
+    background-color: #5c9be9;
+}
+
+.btn__copiar {
+    background: #D8DFE8;
+    color: #286ec5;
+    padding: 15px 20px;
+    border: 1px solid var(--color-terciaria);
+    border-radius: 24px;
+    cursor: pointer;
+    width: 48%; 
+}
+
+.container__ia {
+    width: 50%;
+    margin-left: 50%;
+}
