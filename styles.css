@@ -16,6 +16,7 @@ body {
     gap: 10px;
     background-image: url("img/Ruido.png");
     background-size: 120% 140%;
+    margin-top: 24px;
 }
 
 .container {
@@ -125,9 +126,7 @@ textarea {
     margin-top: auto;
     position: absolute;
 }
-.creador{
-	font-size: 15px;
-}
+
 .usuario{
 	color: #ffffff;
 	font-style: italic;
