@@ -8,6 +8,9 @@
 </head>
 <body>
     <div class="container">
+        <a href="https://github.com/Edwinestrada07/encrypt-text-alura" target="_blank"> 
+            <img class="logo" src="./img/alura.svg">
+        </a>
         <h1 
             class="texto__titulo"
         >
@@ -17,9 +20,13 @@
             </strong>
         </h1>
        
+        <p id="textoInfo">Ingresa el texto que desees encriptar o desencriptar.</p>
         <textarea id="textoIngresado" placeholder="Ingresa tu texto aquí..." class="texto__textea"></textarea>
 
-        <p class="texto__parrafo">Escribe letras minúsculas, no utilizar acentos ni caracteres especiales</p>
+        <span class="texto__advertencia">
+            <img src="./img/!.svg" alt="advertencia" />
+            Solo letras minúsculas y sin acentos
+        </span>
 
         <div class="botones">
             <button id="encriptarBtn" class="btn__encriptar">Encriptar</button>
@@ -30,7 +37,12 @@
     <div  class="container__resultado">
         <img src="./img/ia.png" alt="ia" class="container__ia" />
 
-        <textarea id="resultado" placeholder="Resultado..." readonly class="texto__textea"></textarea>
+        <textarea id="resultado" placeholder="Ningun mensaje fue encontrado" readonly class="texto__textea"></textarea>
+
+        <span class="texto__advertencia">
+            <img src="./img/!.svg" alt="advertencia" />
+            Puedes copiar el texto o eliminar
+        </span>
 
         <div class="botones">
             <button id="copiarBtn" class="btn__copiar">Copiar</button>
@@ -40,6 +52,20 @@
 
     <footer class="footer">
         <p>&copy; 2024 Encriptador de Texto. Todos los derechos reservados.</p>
+        <p class="creador">Creado por
+            <a href="https://portfolioedwinestrada.netlify.app/" target="_blank" class="usuario">
+                Edwin Estrada
+            </a>
+        </p>
+        <div>
+            <a href="https://github.com/diegollanosr" target="_blank">
+                <img class="links" src="./img/github.svg" />
+            </a>
+            
+            <a href="https://www.linkedin.com/in/diegollanosr/" target="_blank">
+                <img class="links" src="./img/linkedin.svg" />
+            </a>
+        </div>
     </footer>
     
     <script src="app.js"></script>

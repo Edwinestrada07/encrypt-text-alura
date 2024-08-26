@@ -10,11 +10,11 @@ const limpiarBtn = document.getElementById("limpiarBtn");
 function encriptar(texto) { //Pasamos como parámetro texto
     let textoEncriptado = texto
         //Cada vez que encuentre dentro del texto las letras e,i,a,o,u las reemplazará
-        .replace(/e/, "enter")
-        .replace(/i/, "imes")
-        .replace(/a/, "ai")
-        .replace(/o/, "ober")
-        .replace(/u/, "ufat");
+        .replace(/e/g, "enter")
+        .replace(/i/g, "imes")
+        .replace(/a/g, "ai")
+        .replace(/o/g, "ober")
+        .replace(/u/g, "ufat");
     return textoEncriptado; //retornará un resultado, y se guarda dentro de la variable textoEncriptado
 }
 
@@ -23,11 +23,11 @@ function desencriptar(textoEncriptado) { //Pasamos como parámetro el return ant
     let texto = textoEncriptado
         //Utilizamos la misma lógica que cada que dentro del texto encriptado encuentre 
         //las palabras enter, imes, ai, ober, ufat las debe reemplazar
-        .replace(/enter/, "e")
-        .replace(/imes/, "i")
-        .replace(/ai/, "a")
-        .replace(/ober/, "o")
-        .replace(/ufat/, "u");
+        .replace(/enter/g, "e")
+        .replace(/imes/g, "i")
+        .replace(/ai/g, "a")
+        .replace(/ober/g, "o")
+        .replace(/ufat/g, "u");
     return texto; //retornará un resultado, y se guarda dentro de la variable texto
 }
 
@@ -50,10 +50,14 @@ copiarBtn.addEventListener("click", () => {
     resultado.select();
     document.execCommand("copy");
     alert("Texto copiado al portapapeles");
+    reset();
 });
 
 //Evento para limpiar los campos de textea
 limpiarBtn.addEventListener("click", () => {
     textoIngresado.value = "";
     resultado.value = "";
-})
+});
+
+
+
