@@ -2,7 +2,7 @@
 
 :root {
     --color-primaria: #000000;
-    --color-secundaria: #f1f1f1;
+    --color-secundaria: #e6e6e6;
     --color-terciaria: #0A3871;
     --fuente-krona: 'Krona One', sans-serif;
     --fuente-montserrat: 'Montserrat', sans-serif;
@@ -11,13 +11,11 @@
 body {
     background-color: var(--color-primaria);
     justify-content: center;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+    display: flex;
     gap: 10px;
     margin-top: 5%;
     background-image: url("img/Ruido.png");
     background-size: 120% 140%;
-    position: relative;
 }
 
 .container {
@@ -33,7 +31,7 @@ body {
     background-color: var(--color-secundaria);
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
     width: 300px;
     text-align: center;
 }
@@ -45,6 +43,10 @@ body {
 }
 
 .texto__titulo__destaque {
+    color: var(--color-terciaria);
+}
+
+.texto__textea {
     color: var(--color-terciaria);
 }
 
@@ -73,7 +75,7 @@ textarea {
     margin-bottom: 18px;
 }
 
-.btn__encriptar {
+.btn__encriptar, .btn__eliminar {
     background: var(--color-terciaria);
     color: var(--color-secundaria);
     padding: 15px 20px;
@@ -83,7 +85,7 @@ textarea {
     width: 48%;
 }
 
-.btn__desencriptar {
+.btn__desencriptar, .btn__copiar {
     background: #D8DFE8;
     color: #286ec5;
     padding: 15px 20px;
@@ -93,29 +95,45 @@ textarea {
     width: 48%;
 }
 
-.btn__encriptar:hover {
+.btn__encriptar:hover, .btn__eliminar:hover {
     background-color: #1a549b;
 }
 
-.btn__desencriptar:hover {
+.btn__desencriptar:hover, .btn__copiar:hover {
     background-color: #5c9be9;
-}
-
-.btn__copiar:hover {
-    background-color: #5c9be9;
-}
-
-.btn__copiar {
-    background: #D8DFE8;
-    color: #286ec5;
-    padding: 15px 20px;
-    border: 1px solid var(--color-terciaria);
-    border-radius: 24px;
-    cursor: pointer;
-    width: 48%; 
 }
 
 .container__ia {
     width: 50%;
     margin-left: 50%;
 }
+
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--color-terciaria);
+    color: white;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 1200px) {
+    /* Móviles */
+    .container__resultado {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+
+    .botones button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+

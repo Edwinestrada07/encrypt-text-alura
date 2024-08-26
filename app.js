@@ -4,6 +4,7 @@ const resultado = document.getElementById("resultado");
 const encriptarBtn = document.getElementById("encriptarBtn");
 const desencriptarBtn = document.getElementById("desencriptarBtn");
 const copiarBtn = document.getElementById("copiarBtn");
+const limpiarBtn = document.getElementById("limpiarBtn");
 
 // Función para encriptar texto
 function encriptar(texto) { //Pasamos como parámetro texto
@@ -50,3 +51,9 @@ copiarBtn.addEventListener("click", () => {
     document.execCommand("copy");
     alert("Texto copiado al portapapeles");
 });
+
+//Evento para limpiar los campos de textea
+limpiarBtn.addEventListener("click", () => {
+    textoIngresado.value = "";
+    resultado.value = "";
+})

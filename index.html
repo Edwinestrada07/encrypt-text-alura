@@ -17,7 +17,7 @@
             </strong>
         </h1>
        
-        <textarea id="textoIngresado" placeholder="Ingresa tu texto aquí..."></textarea>
+        <textarea id="textoIngresado" placeholder="Ingresa tu texto aquí..." class="texto__textea"></textarea>
 
         <p class="texto__parrafo">Escribe letras minúsculas, no utilizar acentos ni caracteres especiales</p>
 
@@ -30,11 +30,18 @@
     <div  class="container__resultado">
         <img src="./img/ia.png" alt="ia" class="container__ia" />
 
-        <textarea id="resultado" placeholder="Resultado..." readonly></textarea>
-        
-        <button id="copiarBtn" class="btn__copiar">Copiar</button>
+        <textarea id="resultado" placeholder="Resultado..." readonly class="texto__textea"></textarea>
+
+        <div class="botones">
+            <button id="copiarBtn" class="btn__copiar">Copiar</button>
+            <button id="limpiarBtn" class="btn__eliminar">Limpiar</button>
+        </div>
     </div>
 
+    <footer class="footer">
+        <p>&copy; 2024 Encriptador de Texto. Todos los derechos reservados.</p>
+    </footer>
+    
     <script src="app.js"></script>
 </body>
 </html>
