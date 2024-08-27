@@ -136,11 +136,13 @@ textarea {
 }
 
 /* Estilos responsivos */
-@media screen and (max-width: 840px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
     /* Móviles */
     body {
         flex-direction: column;
-        margin: 24px;
+        scale: 100%;
+        margin-left: 7%;
+        justify-content: center;
     }
 
     .container__resultado {
@@ -166,22 +168,18 @@ textarea {
     }
 }
 
-@media screen and (min-width: 841px) and (max-width: 1200px) {
+@media screen and (min-width: 769px) and (max-width: 1200px) {
     /* Tablets */
     .container {
-        width: 65%;
+        width: 85%;
     }
 
     .container__resultado {
-        width: 65%;
+        width: 85%;
     }
 
     .texto__textea {
         height: 150px;
         font-size: 1rem;
-    }
-
-    .footer {
-        display: none;
     }
 }
